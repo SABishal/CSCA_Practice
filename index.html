@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCA Exam Practice</title>
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">CSCA <span>Practice</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+    <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('practice')">Practice</a></li>
+    <li><a href="#" onclick="showPage('resources')">Resources</a></li>
+    <li><a href="#" onclick="showPage('faqs')">FAQs</a></li>
+    <li><a href="#" class="highlight" onclick="showPage('progress')">My Progress</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Homepage -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>CSCA Exam Practice 2026</h1>
+                <p>Prepare confidently for the CSCA certification exam with unlimited practice questions. 5 exam sessions per year starting 2026.</p>
+                <a href="#" class="btn" onclick="showPage('practice')">Start Practicing →</a>
+            </div>
+
+            <!-- Dual Countdown -->
+            <div class="countdown-grid">
+                <div class="countdown-card">
+                    <h3>📅 Next Exam</h3>
+                    <p class="target-date">April 25, 2026</p>
+                    <div class="countdown-timer" id="exam-countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="exam-days">--</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="exam-hours">--</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="exam-minutes">--</span>
+                            <span class="label">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="exam-seconds">--</span>
+                            <span class="label">Sec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="countdown-card urgent">
+                    <h3>⚡ Register Now</h3>
+                    <p class="target-date">Deadline: April 9, 2026 at 12:00 noon</p>
+                    <div class="countdown-timer" id="registration-countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="reg-days">--</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="reg-hours">--</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="reg-minutes">--</span>
+                            <span class="label">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="reg-seconds">--</span>
+                            <span class="label">Sec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>2026 Exam Dates</h2>
+                <p class="section-subtitle">5 exam sessions available throughout the year</p>
+                <div class="exam-dates-grid">
+                    <div class="exam-date-card completed">
+                        <div class="session-badge">Session 1</div>
+                        <div class="date-calendar">
+                            <div class="cal-month">JAN</div>
+                            <div class="cal-day">25</div>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-day">Saturday</div>
+                            <div class="exam-status passed">Completed</div>
+                        </div>
+                    </div>
+                    <div class="exam-date-card completed">
+                        <div class="session-badge">Session 2</div>
+                        <div class="date-calendar">
+                            <div class="cal-month">MAR</div>
+                            <div class="cal-day">15</div>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-day">Sunday</div>
+                            <div class="exam-status passed">Completed</div>
+                        </div>
+                    </div>
+                    <div class="exam-date-card upcoming">
+                        <div class="session-badge">Session 3</div>
+                        <div class="date-calendar">
+                            <div class="cal-month">APR</div>
+                            <div class="cal-day">25</div>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-day">Saturday</div>
+                            <div class="exam-status live">Next Exam</div>
+                            <div class="reg-deadline">Register by Apr 9</div>
+                        </div>
+                    </div>
+                    <div class="exam-date-card">
+                        <div class="session-badge">Session 4</div>
+                        <div class="date-calendar">
+                            <div class="cal-month">JUN</div>
+                            <div class="cal-day">27</div>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-day">Saturday</div>
+                            <div class="exam-status upcoming">Upcoming</div>
+                        </div>
+                    </div>
+                    <div class="exam-date-card">
+                        <div class="session-badge">Session 5</div>
+                        <div class="date-calendar">
+                            <div class="cal-month">DEC</div>
+                            <div class="cal-day">TBA</div>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-day">TBA</div>
+                            <div class="exam-status tba">To Be Announced</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Exam Overview</h2>
+                <div class="card-grid">
+                    <div class="card highlight-card">
+                        <div class="card-icon">📝</div>
+                        <h3>Exam Schedule</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <span class="subject">Professional Chinese</span>
+                                <span class="time">12:00 - 13:30</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="subject">Physics</span>
+                                <span class="time">15:00 - 16:00</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="subject">Mathematics</span>
+                                <span class="time">18:00 - 19:00</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="subject">Chemistry</span>
+                                <span class="time">20:30 - 21:30</span>
+                            </div>
+                        </div>
+                        <p class="time-note">* All times are in Beijing Time (UTC+8)</p>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Questions per Subject</h3>
+                        <div class="questions-list">
+                            <div class="question-item">
+                                <span class="subject">Professional Chinese</span>
+                                <span class="count">80</span>
+                            </div>
+                            <div class="question-item">
+                                <span class="subject">Mathematics</span>
+                                <span class="count">48</span>
+                            </div>
+                            <div class="question-item">
+                                <span class="subject">Physics</span>
+                                <span class="count">48</span>
+                            </div>
+                            <div class="question-item">
+                                <span class="subject">Chemistry</span>
+                                <span class="count">48</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="card-icon">📈</div>
+                        <h3>Scoring</h3>
+                        <div class="scoring-list">
+                            <div class="scoring-item">
+                                <span class="label">Grading Scale</span>
+                                <span class="value">100 points</span>
+                            </div>
+                            <div class="scoring-item">
+                                <span class="label">Result Release</span>
+                                <span class="value">7-14 days</span>
+                            </div>
+                            <div class="scoring-item">
+                                <span class="label">Score Validity</span>
+                                <span class="value">2 years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Registration Fees</h2>
+                <div class="fees-grid">
+                    <div class="fee-card">
+                        <div class="fee-icon">📋</div>
+                        <div class="fee-title">Single Subject</div>
+                        <div class="fee-amount">450<span class="currency">RMB</span></div>
+                    </div>
+                    <div class="fee-card">
+                        <div class="fee-icon">🎯</div>
+                        <div class="fee-title">Two or More Subjects</div>
+                        <div class="fee-amount">700<span class="currency">RMB</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Page -->
+        <div id="practice" class="page">
+            <h1>Practice Questions</h1>
+            <p>Prepare for the CSCA exam with targeted practice tests</p>
+
+            <div class="practice-container">
+                <!-- Step 1: Subject Selection -->
+                <div class="practice-step" id="step-subject">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Select Subject</span>
+                    </div>
+                    <div class="subject-cards">
+                        <div class="subject-card" onclick="selectSubject('math')">
+                            <span class="subject-icon">📐</span>
+                            <span class="subject-name">Mathematics</span>
+                        </div>
+                        <div class="subject-card" onclick="selectSubject('physics')">
+                            <span class="subject-icon">⚛️</span>
+                            <span class="subject-name">Physics</span>
+                        </div>
+                        <div class="subject-card" onclick="selectSubject('chemistry')">
+                            <span class="subject-icon">🧪</span>
+                            <span class="subject-name">Chemistry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Test Type -->
+                <div class="practice-step hidden" id="step-type">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Choose Test Type</span>
+                        <button class="back-btn" onclick="goBack('step-type')">← Back</button>
+                    </div>
+                    <div class="test-type-cards">
+                        <div class="test-type-card" onclick="selectTestType('chapter')">
+                            <span class="type-icon">📖</span>
+                            <span class="type-name">Chapter Wise</span>
+                            <span class="type-desc">Practice specific chapters</span>
+                        </div>
+                        <div class="test-type-card" onclick="selectTestType('mock')">
+                            <span class="type-icon">📝</span>
+                            <span class="type-name">Full Mock Test</span>
+                            <span class="type-desc">Complete syllabus test</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2.5: Chapter Selection (for Chapter Wise) -->
+                <div class="practice-step hidden" id="step-chapter">
+                    <div class="step-header">
+                        <span class="step-number">2.5</span>
+                        <span class="step-title">Select Chapter</span>
+                        <button class="back-btn" onclick="goBack('step-chapter')">← Back</button>
+                    </div>
+                    <p class="step-subtitle" id="chapter-subtitle">Choose a chapter to practice:</p>
+                    <div class="chapter-cards" id="chapter-options">
+                        <!-- Dynamic chapter options will appear here -->
+                    </div>
+                </div>
+
+                <!-- Step 3: Questions -->
+                <div class="practice-step hidden" id="step-questions">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Select Questions</span>
+                        <button class="back-btn" onclick="goBack('step-questions')">← Back</button>
+                    </div>
+                    <div class="question-cards" id="question-options">
+                        <!-- Dynamic content based on test type -->
+                    </div>
+                </div>
+
+                <!-- Step 3.5: Confirmation before starting -->
+<div class="practice-step hidden" id="step-confirm">
+  <div class="step-header">
+    <span class="step-number">3.5</span>
+    <span class="step-title">Confirm Your Test</span>
+    <button class="back-btn" onclick="goBack('step-confirm')">← Back</button>
+  </div>
+  <div class="confirm-card">
+    <div class="confirm-detail">
+      <span class="detail-label">Subject:</span>
+      <span class="detail-value" id="confirm-subject"></span>
+    </div>
+    <div class="confirm-detail">
+      <span class="detail-label">Chapter:</span>
+      <span class="detail-value" id="confirm-chapter"></span>
+    </div>
+    <div class="confirm-detail">
+      <span class="detail-label">Questions:</span>
+      <span class="detail-value" id="confirm-count"></span>
+    </div>
+    <div class="confirm-detail">
+      <span class="detail-label">Time Limit:</span>
+      <span class="detail-value" id="confirm-time"></span>
+    </div>
+    <button class="btn-primary" id="start-quiz-btn">Start Quiz →</button>
+  </div>
+</div>
+
+                <!-- Loading State -->
+                <div class="practice-step hidden" id="step-loading">
+                    <div class="loading-card">
+                        <div class="loading-spinner"></div>
+                        <h2>Generating Questions...</h2>
+                        <p>Creating <span id="loading-count"></span> questions for <span id="loading-subject"></span></p>
+                        <p class="loading-hint">This may take a few seconds</p>
+                    </div>
+                </div>
+
+                <!-- Quiz Interface -->
+                <div class="practice-step hidden" id="step-quiz">
+                    <div class="quiz-header">
+                        <div class="quiz-info">
+                            <span class="quiz-subject" id="quiz-subject">Mathematics</span>
+                            <span class="quiz-type" id="quiz-type">Chapter Wise</span>
+                        </div>
+                        <div class="quiz-timer">
+                            <span class="timer-icon">⏱️</span>
+                            <span class="timer-display" id="timer-display">12:00</span>
+                        </div>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">Question 1 of 10</span>
+                    </div>
+                    <div class="quiz-content" id="quiz-content">
+                        <!-- Questions will appear here -->
+                    </div>
+                    <div class="quiz-navigation">
+                        <button class="nav-btn prev-btn hidden" id="prev-btn" onclick="prevQuestion()">← Previous</button>
+                        <button class="nav-btn next-btn" id="next-btn" onclick="nextQuestion()">Next →</button>
+                        <button class="nav-btn submit-btn hidden" id="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="practice-step hidden" id="step-results">
+                    <div class="results-card">
+                        <div class="results-icon">🎉</div>
+                        <h2>Quiz Complete!</h2>
+                        <div class="results-stats">
+                            <div class="stat-box">
+                                <span class="stat-value" id="score-value">0</span>
+                                <span class="stat-label">Score</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value" id="correct-value">0</span>
+                                <span class="stat-label">Correct</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value" id="wrong-value">0</span>
+                                <span class="stat-label">Wrong</span>
+                            </div>
+                            <div class="stat-box">
+  <span class="stat-value" id="unanswered-value">0</span>
+  <span class="stat-label">Unanswered</span>
+</div>
+                            <div class="stat-box">
+                                <span class="stat-value" id="time-value">00:00</span>
+                                <span class="stat-label">Time Taken</span>
+                            </div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="btn-primary" onclick="restartPractice()">Try Another Practice</button>
+                            <button class="btn-secondary" onclick="showPage('home')">Back to Home</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; text-align: center;">
+  <button class="btn-secondary" onclick="resetProgress()">Reset All Practice Progress</button>
+</div>
+            </div>
+        </div>
+
+                        <!-- Resources Page -->
+        <div id="resources" class="page">
+            <h1>📚 CSCA Syllabus</h1>
+            <p>Detailed syllabus for each subject – official CSCA examination topics.</p>
+
+            <!-- Mathematics Syllabus -->
+            <div class="info-section">
+                <h2>📐 Mathematics</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">📐</div>
+                        <h3>Sets and Inequalities</h3>
+                        <ul>
+                            <li>Definition, operations, and representation of sets</li>
+                            <li>Basic properties and solution methods of inequalities (e.g., quadratic and rational inequalities)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <h3>Functions</h3>
+                        <ul>
+                            <li>Concepts and properties of functions (domain, range, monotonicity, parity, etc.)</li>
+                            <li>Basic elementary functions (power, exponential, logarithmic, and trigonometric functions)</li>
+                            <li>Sequences (general term formula and summation of arithmetic and geometric sequences)</li>
+                            <li>Basics of derivatives and calculus (definition, geometric meaning, and simple applications)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📏</div>
+                        <h3>Geometry and Algebra</h3>
+                        <ul>
+                            <li>Plane analytic geometry (equations and properties of lines, circles, ellipses, hyperbolas, and parabolas)</li>
+                            <li>Vectors and complex numbers (vector operations, basic operations of complex numbers)</li>
+                            <li>Solid geometry (rectangular coordinate system in space and properties of simple solids)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>Probability and Statistics</h3>
+                        <ul>
+                            <li>Classical probability model and probability calculation</li>
+                            <li>Numerical characteristics of data (mean, variance, etc.)</li>
+                            <li>Basic concepts of normal distribution</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Physics Syllabus -->
+            <div class="info-section">
+                <h2>⚛️ Physics</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Mechanics</h3>
+                        <ul>
+                            <li>Kinematics: displacement, velocity, acceleration, uniform acceleration motion, free fall motion</li>
+                            <li>Newton's laws of motion and their applications</li>
+                            <li>Momentum and impulse, law of conservation of momentum</li>
+                            <li>Work and energy, law of conservation of mechanical energy</li>
+                            <li>Circular motion and universal gravitation</li>
+                            <li>Simple harmonic motion and mechanical waves</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Electromagnetism</h3>
+                        <ul>
+                            <li>Electrostatics: Coulomb's law, electric field strength, electric potential</li>
+                            <li>Direct current circuits: Ohm's law, series and parallel circuits</li>
+                            <li>Magnetic field: magnetic induction, Ampere's force, Lorentz force</li>
+                            <li>Electromagnetic induction: Faraday's law, Lenz's law</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔥</div>
+                        <h3>Thermodynamics</h3>
+                        <ul>
+                            <li>Kinetic theory of gases</li>
+                            <li>Ideal gas equation of state</li>
+                            <li>First law of thermodynamics</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💡</div>
+                        <h3>Optics</h3>
+                        <ul>
+                            <li>Geometrical optics: laws of reflection and refraction</li>
+                            <li>Physical optics: interference and diffraction</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚛️</div>
+                        <h3>Modern Physics</h3>
+                        <ul>
+                            <li>Photoelectric effect</li>
+                            <li>Atomic structure</li>
+                            <li>Fundamentals of nuclear physics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chemistry Syllabus -->
+            <div class="info-section">
+                <h2>🧪 Chemistry</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🧪</div>
+                        <h3>Basic Chemical Concepts and Calculations</h3>
+                        <ul>
+                            <li>Classification and state changes of matter</li>
+                            <li>Chemical notation and equation writing</li>
+                            <li>Solution concentration and pH calculations</li>
+                            <li>Calculations involving the amount of substance</li>
+                            <li>Application of the ideal gas law</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚗️</div>
+                        <h3>Properties and Reactions of Substances</h3>
+                        <ul>
+                            <li>Properties of common inorganic substances (elements, oxides, acids, bases, and salts)</li>
+                            <li>Basic organic compounds (hydrocarbons and their derivatives)</li>
+                            <li>Identification of redox reactions</li>
+                            <li>Ionic reactions and testing methods</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📖</div>
+                        <h3>Chemical Theories and Laws</h3>
+                        <ul>
+                            <li>Atomic structure and periodic law</li>
+                            <li>Chemical bonds and intermolecular forces</li>
+                            <li>Reaction rate and chemical equilibrium</li>
+                            <li>Theories of electrolyte solutions</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔬</div>
+                        <h3>Chemical Experiments and Applications</h3>
+                        <ul>
+                            <li>Laboratory safety and use of apparatus</li>
+                            <li>Preparation and identification of common gases</li>
+                            <li>Methods for separation and purification of substances</li>
+                            <li>Analysis of industrial chemical processes (e.g., ammonia synthesis)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs Page -->
+<div id="faqs" class="page">
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know about the CSCA exam</p>
+
+    <!-- Exam Overview -->
+    <div class="faq-category">
+        <div class="faq-category-header">
+            <span class="category-icon">📋</span>
+            <span>Exam Overview</span>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the CSCA exam?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The CSCA (China Scholastic Competency Assessment) is a standardized test designed for international students who plan to pursue undergraduate degrees in China. It assesses language proficiency and academic readiness, serving as an important reference for university admissions and scholarship evaluations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is the CSCA exam mandatory?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, starting from the 2026/2027 academic year, all international applicants to Chinese Government Scholarship universities must take the CSCA exam as part of their application requirements.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the exam pattern for CSCA 2026?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-table">
+                        <div class="table-row header">
+                            <span>Subject</span>
+                            <span>Questions</span>
+                            <span>Duration</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Professional Chinese</span>
+                            <span>80</span>
+                            <span>90 min</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Mathematics</span>
+                            <span>48</span>
+                            <span>60 min</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Physics</span>
+                            <span>48</span>
+                            <span>60 min</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Chemistry</span>
+                            <span>48</span>
+                            <span>60 min</span>
+                        </div>
+                    </div>
+                    <p class="note">All questions are multiple-choice. No negative marking.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How often is the CSCA exam held?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The CSCA exam is held <strong>5 times per year</strong> in 2026: January, March, April, June, and December. Check the official website for specific dates.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the exam difficulty level?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The CSCA exam is designed to test <strong>high school-level knowledge</strong>. Thorough preparation is recommended, especially since calculators are not allowed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration & Fees -->
+    <div class="faq-category">
+        <div class="faq-category-header">
+            <span class="category-icon">📝</span>
+            <span>Registration & Fees</span>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How do I register for the CSCA exam?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Registration is done online through the official CSCA portal at <a href="https://www.csca.cn" target="_blank" class="link">csca.cn</a>. You'll need to:</p>
+                    <ul>
+                        <li>Create an account on the portal</li>
+                        <li>Fill in your educational details</li>
+                        <li>Upload your passport information</li>
+                        <li>Pay the registration fee</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the registration fee?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="fee-info">
+                        <div class="fee-box">
+                            <span class="fee-label">Single Subject</span>
+                            <span class="fee-amount">450 RMB</span>
+                        </div>
+                        <div class="fee-box highlight">
+                            <span class="fee-label">Two or More</span>
+                            <span class="fee-amount">700 RMB</span>
+                        </div>
+                    </div>
+                    <p class="note">Fees are non-refundable but can be transferred to a future exam date.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What ID is required for registration?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Passport is the only acceptable ID</strong> for the CSCA exam. Make sure your passport is valid and matches the information provided during registration.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I get a refund if I don't appear?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No, exam fees are <strong>non-refundable</strong> if you fail to appear. However, you may request a fee transfer to a future exam date with valid documentation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Day -->
+    <div class="faq-category">
+        <div class="faq-category-header">
+            <span class="category-icon">📅</span>
+            <span>Exam Day</span>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What documents do I need for exam day?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Bring the following on exam day:</p>
+                    <ul>
+                        <li><strong>Admission Ticket</strong> (printed)</li>
+                        <li><strong>Valid Passport</strong></li>
+                    </ul>
+                    <p class="warning">Electronic devices and calculators are strictly prohibited.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I use a calculator?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>No calculators allowed.</strong> The CSCA math section is designed to be solved with mental math, algebraic manipulation, and scratch paper only. This policy applies to all subjects.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Where can I take the exam?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>CSCA is conducted primarily in a <strong>remote, home-based online format</strong>. Onsite test centers (computer-based or paper-based) are gradually being established in major source countries and regions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What if my internet disconnects during the exam?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Don't worry! The exam system <strong>auto-saves your answers</strong>. Simply reconnect to the test platform and continue from where you left off. Technical support is available during the exam.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How do I download my admission ticket?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Log in to the official CSCA portal, go to the <strong>"Registration -> My CSCA -> Admission Ticket"</strong> section, and download it. The admission ticket becomes available a few days before the exam date.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results & Scoring -->
+    <div class="faq-category">
+        <div class="faq-category-header">
+            <span class="category-icon">📊</span>
+            <span>Results & Scoring</span>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>When are CSCA scores released?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="score-info">
+                        <div class="score-box">
+                            <span class="score-type">Online / Computer-based</span>
+                            <span class="score-time">7 working days</span>
+                        </div>
+                        <div class="score-box">
+                            <span class="score-type">Paper-based</span>
+                            <span class="score-time">14 working days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How long are scores valid?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>CSCA scores serve as an <strong>important reference for university admissions and scholarship evaluations</strong>. You can retake the exam to improve your score within the application period.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is there negative marking?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>No negative marking</strong> for wrong answers. Each correct answer earns points. We recommend answering all questions, even if you're unsure.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How many times can I attempt the exam?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can take the CSCA exam <strong>multiple times</strong>. Scores are valid as an important reference for admissions, and you can submit your highest score to universities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preparation -->
+    <div class="faq-category">
+        <div class="faq-category-header">
+            <span class="category-icon">📚</span>
+            <span>Preparation</span>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the exam language?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <ul class="lang-list">
+                        <li><strong>Professional Chinese</strong> - Chinese only</li>
+                        <li><strong>Mathematics, Physics, Chemistry</strong> - Available in both Chinese and English</li>
+                    </ul>
+                    <p>You can choose your preferred language during registration.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What study materials are recommended?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recommended resources include:</p>
+                    <ul>
+                        <li>Official CSCA study guides</li>
+                        <li>Previous years' question papers</li>
+                        <li>Online practice tests</li>
+                    </ul>
+                    <p>The official portal provides approved study materials and resources.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How can I prepare for the no-calculator format?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Tips for preparation:</p>
+                    <ul>
+                        <li>Practice mental math daily</li>
+                        <li>Learn multiplication tables up to 20</li>
+                        <li>Practice estimation techniques</li>
+                        <li>Solve problems manually on scratch paper</li>
+                    </ul>
+                    <p>Our practice platform includes timed exercises to help you adapt.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Are there any prerequisites?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>There are <strong>no formal prerequisites</strong>. However, it is recommended that candidates have knowledge of Mathematics, Physics, and Chemistry at high school level.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is the CSCA certificate recognized internationally?</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! The CSCA certification is recognized by all <strong>Chinese Government Scholarship universities</strong> and is a mandatory requirement for international applicants seeking scholarships to study in China.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- My Progress Page -->
+<div id="progress" class="page">
+    <h1>📈 My Practice Progress</h1>
+    <p>Track your progress for each chapter.</p>
+    <div id="progress-container">
+        <!-- Progress data will be injected here by JavaScript -->
+    </div>
+    <div style="margin-top: 2rem; text-align: center;">
+        <button class="btn-secondary" onclick="resetProgress()">Reset All Progress</button>
+    </div>
+</div>
+
+        <!-- About Us Page
+        <div id="about" class="page">
+            <h1>About the Creator</h1>
+            <p>Meet the mind behind CSCA Practice.</p>
+
+            <div class="about-container">
+                <div class="about-left">
+                    <h2>Shaid Ahmed Bishal</h2>
+                    <div class="about-roles">
+                        <span class="role-tag">Full Stack Web Developer</span>
+                        <span class="role-tag">Software Engineering Student</span>
+                        <span class="role-tag">CSCA Instructor</span>
+                    </div>
+                    <p class="about-tagline">Building tools to help students succeed in their certification journey.</p>
+
+                    <div class="bio">
+                        <p>Hello! I'm <strong>Shaid Ahmed Bishal</strong>, the creator of CSCA Practice. I built this platform to help students prepare for the CSCA exam with unlimited practice questions.</p>
+                        <p>As a software engineering student in China with a passion for education and technology, I saw the need for a comprehensive, accessible practice tool that could help students gauge their readiness for the exam. This platform is my contribution to making exam preparation more efficient and less stressful.</p>
+                        <p>When I'm not working on educational tools, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book.</p>
+                    </div>
+
+                    <div class="social-links">
+    <a href="https://www.facebook.com/shaid.ahmed.bishal.2025/" target="_blank" class="social-link facebook" title="Facebook">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        <span>Facebook</span>
+    </a>
+    <a href="mailto:shaidahmedbishal@gmail.com" class="social-link gmail" title="Email">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        <span>Gmail</span>
+    </a>
+    <a href="https://wa.me/8801996408688" target="_blank" class="social-link whatsapp" title="WhatsApp">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+    <!-- WeChat button (opens modal) -->
+<a href="#" class="social-link wechat wechat-trigger" title="WeChat">    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.52 1.28 4.78 3.28 6.34L4 20l3.36-1.41c.8.25 1.66.41 2.64.41 5.52 0 10-3.82 10-8.5S17.52 2 12 2zm0 2c4.41 0 8 3.14 8 6.5S16.41 17 12 17c-.96 0-1.9-.14-2.78-.41L7 19l1.22-2.22C6.58 15.62 4 13.42 4 10.5 4 7.14 7.59 4 12 4z"/>
+        <circle cx="8.5" cy="10.5" r="1.5"/>
+        <circle cx="15.5" cy="10.5" r="1.5"/>
+    </svg>
+    <span>WeChat</span>
+</a>
+</div>
+                </div>
+                <div class="about-right">
+                    <div class="about-image-wrapper">
+                        <img src="resources/bishal.png" alt="Shaid Ahmed Bishal" class="about-image">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h3>CSCA Practice</h3>
+                <p>Your trusted preparation companion for the CSCA certification exam. Practice with unlimited questions and ace your exam with confidence.</p>
+                <button class="btn-feedback" id="openFeedbackBtn">💬 Send Feedback</button>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('practice')">Practice</a></li>
+                        <li><a href="#" onclick="showPage('faqs')">FAQs</a></li>
+                        <li><a href="#" onclick="showPage('progress')">My Progress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.csca.cn" target="_blank">Official CSCA Site</a></li>
+                        <li><a href="mailto:shaidahmedbishal@gmail.com">Contact Support</a></li>
+                        <li><a href="#" onclick="openModal('termsModal'); return false;">Terms of Use</a></li>
+<li><a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CSCA Practice. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <!-- Modal for WeChat QR Code -->
+<div id="wechatModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3>Scan WeChat QR Code</h3>
+        <img src="resources/We_Chat.png" alt="WeChat QR Code" class="modal-qr">
+        <p>Scan with WeChat to contact me</p>
+    </div>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeFeedbackModal()">&times;</span>
+        <h3>Send Feedback or Report an Issue</h3>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="feedbackName">Your Name (optional)</label>
+                <input type="text" id="feedbackName" name="name" placeholder="Anonymous">
+            </div>
+            <div class="form-group">
+                <label for="feedbackEmail">Your Email (optional)</label>
+                <input type="email" id="feedbackEmail" name="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label for="feedbackMessage">Message *</label>
+                <textarea id="feedbackMessage" name="message" rows="5" required placeholder="Tell us what you think..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-primary" id="submitFeedbackBtn">Send Message</button>
+            </div>
+            <div id="feedbackStatus" class="feedback-status"></div>
+        </form>
+    </div>
+</div>
+
+<!-- Terms Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('termsModal')">&times;</span>
+        <h3>Terms of Use</h3>
+        <div class="modal-text">
+            <p>This is a free practice platform for the CSCA exam. By using this site, you agree to use it for personal, non-commercial study purposes only. All content is for practice and may not reflect actual exam questions.</p>
+            <p>We reserve the right to modify or discontinue the service at any time.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Modal -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('privacyModal')">&times;</span>
+        <h3>Privacy Policy</h3>
+        <div class="modal-text">
+            <p>We do not collect personal data beyond what you voluntarily provide (e.g., feedback form). Your quiz progress is stored locally in your browser and never sent to our servers.</p>
+            <p>We use cookies only for essential functionality. No third-party tracking is used.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
