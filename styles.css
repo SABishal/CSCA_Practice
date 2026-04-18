@@ -167,7 +167,8 @@ p {
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+            url('resources/hero_banner.png') center/cover no-repeat;
     border-radius: 16px;
     color: white;
     margin-bottom: 2rem;
